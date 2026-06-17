@@ -137,7 +137,7 @@ Consider an individual for whom $(1-\tau_y)w_y < F$. In order to invest in the a
 \begin{equation}\label{eq:nborrow}
 b(w_y) = F-(1-\tau_y)w_y. 
 \end{equation}
-Let $B(w_y)=\tau_y w_y$ denote the balance in her retirement account. Her collateral coverage ratio is given by:
+Under the benchmark contribution rule, let $B(w_y)=\tau_y w_y$ denote the balance in her retirement account. Her collateral coverage ratio is given by:
 \begin{align}\label{eq:ncoverage}
 v(w_y) = \frac{\eta B(w_y)}{b(w_y)}
 \end{align}
@@ -151,7 +151,7 @@ If she is able to borrow $b(w_y)$ and she invests $F$ in the alternative asset, 
 %c^a_{t+1} + s^{a+}_{t+1} \psi^a_{t+1}(\theta^a_{t+1}) \leq z_{t+1} + (1-\tau_{t+1})w_{t+1} + s^{a-}_{t+1},
 c_m + s_m = (1-\tau_m)w_m + \left(z  - R(v(w_y))b(w_y)\right)^+. %\min\left\{0,z  - R(v(w_y))b(w_y))\right\}.
 \end{align}
-If $z$ turns out to be zero, the individual defaults on her debt. Still, creditors may seize up to $\eta B(w_y)$ of her retirement savings. Therefore, her consumption at old age is given by: \begin{align}\label{eq:nbco}
+If $z$ turns out to be zero, the individual defaults on her debt. Since young retirement savings have grown to $R_fB(w_y)$ by middle age, creditors may seize up to $R_f\eta B(w_y)$ from the pledgeable part of her retirement savings. The remaining balance then grows until old age, so her consumption at old age is given by: \begin{align}\label{eq:nbco}
 c_o  = \begin{cases}
 R_f\left(
 s_m + \tau_m w_m +  R_f B(w_y) 
@@ -171,9 +171,9 @@ c_m + \beta c_o =   w_m   + (1-\eta) R_f B(w_y) + (\eta R_f B(w_y) + z    - R(v(
 \end{align}
 Furthermore, her contribution $\tau_m$ at middle age is inconsequential for her welfare. 
 
-In equilibrium, creditors have to be indifferent regarding lending to a young individual with a collateral coverage $v$ and investing in the asset that yields $R_f$. Since $\epsilon$ is the risk of default and creditors are risk-neutral, the non-arbitrage condition is given by: 
+In equilibrium, creditors have to be indifferent regarding lending to a young individual with a collateral coverage $v$ and investing in the asset that yields $R_f$. Since $\epsilon$ is the risk of default and creditors are risk-neutral, and since $R_f v$ is the middle-age value of pledgeable collateral per dollar borrowed, the non-arbitrage condition is given by: 
 \begin{align}\label{eq:narby}
-R_f  = (1-\epsilon)R(v) + \epsilon \min\left\{R_fv, \ R(v)\right\},
+R_f  = (1-\epsilon)R(v) + \epsilon \min\left\{R_f v, \ R(v)\right\},
 \end{align}
 Therefore, the lending rate must have a risk premium over the risk-free rate: 
 \begin{equation}\label{eq:neqRv}
@@ -184,7 +184,7 @@ R_f \text{ otherwise}.
 \end{equation}
 
 Let $V(w_y)$ denote the expected payoff for a young individual endowed with $w_y$ in labor earnings.  Use $\mathcal{N}:=\beta(1-\epsilon)\pi - F>0$ to denote the expected net present value of the alternative investment. 
-Equations (\ref{eq:nborrow}), (\ref{eq:ncoverage}), (\ref{eq:npvc}) and (\ref{eq:neqRv}) imply that, \textit{conditional on investing in the alternative asset}, her lifetime payoff  is the expected present value of her wages plus the net present value of the alternative investment:  %the alternative investment's surplus:
+Equations (\ref{eq:nborrow}), (\ref{eq:ncoverage}), (\ref{eq:npvc}) and (\ref{eq:neqRv}) imply that, \textit{conditional on investing in the alternative asset}, her lifetime payoff  is the expected present value of her wages plus the net present value of the alternative investment. The zero-profit condition for lenders implies that the present value of expected repayments equals the amount borrowed, so the borrower captures the project's net present value:  %the alternative investment's surplus:
 %Conditional on being able to invest in the alternative asset, her lifetime payoff  is the present expected value of her wages plus the expected net return on the alternative investment:
 \begin{align}\label{eq:nVc}
 %V(w_y) =    w_y - F + \beta\left(E(w_m|w_y) +   (1-\epsilon)\pi\right)  
@@ -196,7 +196,11 @@ Nonetheless, it is assumed that $x$ is not observable, so creditors cannot force
 V(w_y) \geq    w_y  + \beta E(w_m|w_y) +   b(w_y) -  \eta B(w_y)  
 \end{align}
 %The more individuals have to borrow, the higher the moral hazard. 
-Equation (\ref{eq:nicc}) implies that lending will be no higher than $\mathcal{N} + \eta B(w_y)$. In other words, investing in the alternative asset requires a downpayment equal to $F - \mathcal{N} - \eta B(w_y)$. However, disposable income for young individuals is only $(1-\tau_y)w_y$. Therefore, no individual with earnings below a certain threshold will be able to borrow enough to invest in the alternative asset. This threshold is given by:
+Substituting (\ref{eq:nVc}) into (\ref{eq:nicc}) implies:
+\begin{align*}
+b(w_y) \leq \mathcal{N} + \eta B(w_y).
+\end{align*}
+In other words, investing in the alternative asset requires a downpayment equal to $F - \mathcal{N} - \eta B(w_y)$. However, disposable income for young individuals is only $(1-\tau_y)w_y$. Using $B(w_y)=\tau_y w_y$, no individual with earnings below a certain threshold will be able to borrow enough to invest in the alternative asset. This threshold is given by:
 \begin{align}\label{eq:nthreshold}
 %    \underline{w_y} = \frac{2F - \beta(1-\epsilon)\pi}{1-(1 - \eta)\tau_y}
     \underline w_y = \frac{F  - \mathcal{N}}{1-(1 - \eta)\tau_y} 
@@ -247,7 +251,7 @@ Meanwhile, young individuals only contribute over labor earnings above  $F-\math
         T(w_y) = \tau_y\left(w_y - \left( F-\mathcal{N}\right)\right)^+.
     \end{equation} 
 %    This means that, for earnings below $F-NPV$, the marginal contribution is zero. Meanwhile, for earnings above $F-NPV$, the marginal contribution is $\tau_y>0$. 
-    \item The young retirement balance is given by:
+    \item Under this system, the young retirement balance is given by:
 %    $$B(w_y) =  \left(F-NPV -w_y\right)^+ + (\tau_y-\phi)\left(w_y - \left( F-NPV\right)\right)^+$$
     \begin{equation}\label{eq:B}
     B(w_y) =  F-\mathcal{N}  + \tau_y\left(w_y - \left( F-\mathcal{N}\right)\right)^+

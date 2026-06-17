@@ -1,0 +1,306 @@
+
+\documentclass[draft,pdftex,nolinenumbers,noinfoline]{article}
+
+\RequirePackage[OT1]{fontenc}
+\RequirePackage{amsthm}
+\RequirePackage[cmex10]{amsmath}
+\RequirePackage{natbib}
+\RequirePackage[colorlinks,citecolor=blue,urlcolor=blue]{hyperref}
+\RequirePackage{hypernat}
+\RequirePackage{tikz}
+\RequirePackage{amssymb}
+\RequirePackage{enumerate}
+\RequirePackage{comment}
+\RequirePackage{mathtools}
+\RequirePackage{bbm}
+\RequirePackage{multirow}
+\RequirePackage{hyperref}
+\usepackage{csquotes}
+
+
+\usepackage{tikz}
+\usetikzlibrary{arrows,calc}
+\tikzset{
+%Define standard arrow tip
+>=stealth',
+%Define style for different line styles
+help lines/.style={dashed, thick},
+axis/.style={<->},
+important line/.style={thick},
+connection/.style={thick, dotted},
+}
+\newcommand\A{\ensuremath{\mathcal{A}}}
+\newcommand\B{\ensuremath{\mathcal{B}}}
+
+\usepackage{tikz,pgfplots}                      
+\pgfplotsset{compat=1.12}
+\usetikzlibrary{intersections}
+
+%\startlocaldefs
+%\numberwithin{equation}{section}
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}%[section]
+\newtheorem{lmm}{Lemma}%[section]
+\newtheorem{prp}{Proposition}%[section]
+\newtheorem{dfn}{Definition}%[section]
+\newtheorem{example}{Example}%[section]
+\newtheorem{crl}{Corollary}%[section]
+\newtheorem{remark}{Remark}
+\newtheorem{Assump}{Assumption}
+%\endlocaldefs
+
+
+
+\begin{document}
+
+\title{On the efficiency of illiquid mandatory retirement savings under endogenous borrowing constraints}
+\date{August 2022}
+
+\author{
+{Oliver Pardo\footnote{ pardoo@javeriana.edu.co. Departamento de Administración, Pontificia Universidad Javeriana, Bogotá, Colombia. Thanks to David Echeverry, Juli\'{a}n Parra, Jairo Rend\'on for valuable comments and suggestions.}} 
+}
+
+\maketitle
+\setcounter{page}{1}
+
+
+
+
+
+
+\begin{abstract}
+\textit{
+%Your investment decisions get distorted when, instead of investing directly from your pocket, you lend the money to a financial intermediary who in turns lends you the money back. This implies that mandatory contributions to retirement savings accounts may tighten your borrowing constraints, forcing you to forgone profitable investment options. This welfare-detrimental effect can be offset if the balance on your retirement account can be used as collateral.
+Mandatory contributions to retirement savings accounts may tighten existing borrowing constraints, forcing individuals to forgo profitable investment options. This welfare-detrimental effect can be offset if retirement savings are allowed to serve as collateral. Moreover, some credit market imperfections may disappear altogether if this later policy is combined with a pension system with unconditional basic savings.
+%This note illustrates some costs of mandatory contributions to individual retirement accounts on investment, welfare and efficiency. However, this detrimental effect can be offset by allowing the savings in the retirement accounts to serve as collateral for loans.
+}
+\end{abstract}
+
+%\begin{keyword}
+%\kwd{pensions}
+%\kwd{mandatory savings}
+%\kwd{borrowing constraints}
+\textsc{Keywords}: pensions, mandatory savings, borrowing constraints, collateral.
+\textsc{JEL Codes}: D14, E21, G11, H55
+%\end{keyword}
+
+
+%\end{frontmatter}
+
+\section{Introduction}
+
+INSTITUTIONAL CONTEXT IN COUNTRIES
+
+CHILE
+
+COLOMBIA
+
+DENMARK
+
+OTHERS
+
+US
+
+TALK ABOUT WHAT YOU MEAN: HOUSEHOLD AND SPECIALLY EDUCATION
+
+TALK ABOUT ROLE OF HOUSING WEALTH AS COLLATERAL 
+
+Mandatory contributions to individual retirement savings accounts are commonly justified as a commitment device to postpone consumption for old age.\footnote{This is due to myopia or time-inconsistent preferences. See \cite{Feldstein1985}, \cite{Laibson1998} or \cite{Diamond2003}  for some references.} However, this device will only be effective as long as some borrowing constraint prevents individuals from undoing the increase in savings. %\footnote{The undoing of any forced savings under perfect capital markets is an intuitive and well-known result. See \cite{Gale1998}, for example.} 
+Nonetheless, the literature assumes that the borrowing constraint is exogenous.%\footnote{In order to ensure that mandatory contributions have any bite, authors like \cite{Feldstein2002}, \cite{Imrohorouglu2003} and \cite{Cremer2008} impose all an exogenous borrowing constraint.} 
+\footnote{See \cite{Feldstein2002}, \cite{Imrohorouglu2003},  \cite{Cremer2008} and \cite{Dybvig2010} 
+for examples of life cycle models where borrowing constraints are exogenous.} 
+In this note, I endogenize the borrowing constraints and show that mandatory savings may exacerbate the existing inefficiencies of the credit market. This is due to the fact that mandatory contributions restrict the  liquidity of non-retired individuals who are in need of borrowings to invest.\footnote{As shown by \cite{Coeurdacier2015}, individuals tend to be net borrowers before reaching their middle age. This observation led \cite{Andersen2017} to correctly ask why young borrowers are forced to save for their retirement. My answer to this question contrasts with theirs.} Nonetheless, this negative effect can be offset if the retirement savings can serve as collateral.\footnote{To my knowledge, no previous analysis of mandatory contributions to individual retirement accounts acknowledges the role of collateral in borrowing contracts. For an analysis of this type of contracts, see \cite{Geanakoplos2010} and \cite{Simsek2013b}.} Furthermore, if the policy of allowing retirement savings to serve as collateral is combined with a policy of transferring the contributions of high earners to the retirement accounts of low earners, then the inefficiencies of the credit market can be overcome.
+
+\section{The Model}\label{sec:model}
+
+%\subsection{Preferences}
+
+Consider an economy in discrete time with three generations in each period: young ($y$), middle aged ($m$) and old ($o$). Each generation is composed of a continuum of risk-neutral individuals with measure one. Their instantaneous utility depends exclusively on consumption. If $c_i$ denotes consumption at age $i\in\{y,m,o\}$ and their discount factor is $\beta$, then their payoff function is given by the following function:
+
+$$c_y + \beta c_m + \beta^{2}c_o$$ 
+
+Individuals work while they are not old, supplying labor inelastically. The probability for a young individual of having labor earnings below $w_y$ is given by $G(w_y)$, where the support of $G$ is $[0,w_+]$ and where $w_+$ is positive. Conditional on a realization $w_y$, the probability of earning $w_m$ or less at middle age is $H(w_m|w_y)$. Individuals at age $i\in\{y,m\}$ are obliged to save a fraction $\tau_i\in[0,1)$ of their labor earnings into individual retirement accounts. These savings are only available for consumption when individuals grow old. %The funds in the retirement accounts are managed by private managers at no cost.\footnote{In Chile and Colombia, the management fees are at least 1\% of labor earnings.}
+
+Both individuals and retirement funds are able to save by investing in a safe asset that yields a gross return $1+r$ or by lending to other individuals. Individuals with a collateral coverage ratio $v$ can pledge to pay $R(v)$ on each dollar borrowed. Nonetheless, they are subject to limited liability. Creditors cannot seize any wages in case of default, but can seize an exogenous fraction $\eta\in[0,1]$ of the retirement savings\footnote{See \cite{Geanakoplos2010} and \cite{Simsek2013b} for an analysis of collateralized loans.}. 
+ In equilibrium, creditors will have to be indifferent between investing at a return $1+r$ and lending at a rate $R(v)$. Still, credit might be rationed for moral hazard reasons explained further below. Furthermore, in equilibrium the consumer has to be indifferent between the allocation of consumption across different periods. Therefore, in equilibrium it must be the case that $1+r = \beta^{-1}$.
+
+%\subsection{Investment options}
+%Individuals can invest in the asset with return $\beta^{-1}$ on their own and may lend to each other as well. Nonetheless, 
+Young individuals may become net borrowers in order to invest in an option only available to them (think of it as education). This investment yields a stochastic payoff $z$, which is realized when individuals reach middle age. The support of $z$ is given by $\{0,\pi\}$, where $\pi>0$. The distribution of $z$ depends on the investment done at young age, which is denoted by $x$. A chance of earning $\pi$ requires an investment of at least $F>0$. Still, there is a chance $\epsilon\in(0,1)$ of failing to achieve a payoff $\pi$. %As an example, if the alternative investment were real estate, $F$ can be though as the cost of buying a house and $\pi$ as the value it will have unless it gets on fire and there are no insurance options. 
+The probability of a payoff $\pi$ at middle age is given by:
+\begin{align}\label{eq:zdist}
+P(z = \pi \ |  \ x) = \begin{cases} 0 \text{ if } x<F , \\
+1-\epsilon \text{ if } x\geq F \end{cases}
+\end{align}
+Hence, the expected gross return on this alternative investment is given by:
+\begin{align}
+E\left(\frac{z}{x}\right) = 
+\begin{cases} 
+0 \text{ if } x<F , \\
+\frac{(1-\epsilon)\pi}{x} \text{ if } x\geq F
+\end{cases}
+\end{align}
+%Let $NPV :=\beta(1-\epsilon)\pi - F$ denote the expected net present value of the alternative investment, which is assumed to be positive.
+The following assumption guarantees that all young agents will be interested in investing in this alternative asset: 
+\begin{Assump}\label{Assump1}
+%$E(z/F)= (1-\epsilon)\pi/F > \beta^{-1}$
+$F<\beta(1-\epsilon)\pi < 2F$
+\end{Assump}
+%It is also assumed that the retirement funds may finance this investment by lending to young individuals but cannot directly invest in the alternative asset. 
+%It is assumed that the return $(1-\epsilon)\pi/F$ on the alternative asset is greater than the return $R$ on the standard asset. Therefore, young individuals will invest $F$ in the alternative asset if they manage to reach sufficient funds.
+
+Consider an individual for whom $(1-\tau_y)w_y < F$. In order to invest in the alternative asset, she would have to borrow the following amount: 
+\begin{equation}\label{eq:nborrow}
+b = F-(1-\tau_y)w_y. 
+\end{equation}
+Her collateral coverage ratio is given by:
+\begin{align}\label{eq:ncoverage}
+v = \frac{\eta \tau_y w_y}{b}
+\end{align}
+%In order to specify the budget constraints, 
+%Young individuals may not be able to save and borrow at the same interest rate. 
+%\subsection{Young budget constraint}
+%Since agents are indifferent regarding the intertemporal allocation of consumption, there is no consequence in disregarding the saving decisions of young agents. However, 
+%Young individuals with not enough labor earnings may be interested in borrowing to invest in the alternative asset. 
+If she is actually able to borrow $b$ and she invests $F$ in the alternative asset, her middle-age consumption will depend on the realization $z$ for her investment payoff and the realization $w_m$ for her middle-age labor earnings. Let $s_m$ be her voluntary savings at middle age. Use $(\cdot)^+$ to denote the maximum between zero and the argument inside the brackets.  Since creditors cannot seize labor earnings, her budget constraint at middle age is given by:  
+\begin{align}\label{eq:nbca}
+%c^a_{t+1} + s^{a+}_{t+1} \psi^a_{t+1}(\theta^a_{t+1}) \leq z_{t+1} + (1-\tau_{t+1})w_{t+1} + s^{a-}_{t+1},
+c_m + s_m = (1-\tau_m)w_m + \left(z  - R(v)b)\right)^+. %\min\left\{0,z  - R(v(w_y))b(w_y))\right\}.
+\end{align}
+If $z$ turns out to be zero, the individual defaults on her debt. Still, creditors may seize up to $\eta\tau_y w_y$ of her retirement savings. Therefore, her consumption at old age is given by: \begin{align}\label{eq:nbco}
+c_o  = \begin{cases}
+\beta^{-1}\left(
+s_m + \tau_m w_m +  \beta^{-1}\tau_y w_y 
+ \right) \text{ if }  z=\pi, \\
+\beta^{-1}\left(
+s_m + \tau_m w_m + (1-\eta) \beta^{-1}\tau_y w_y 
++ \left(
+  \beta^{-1}\eta \tau_y w_y - R(v)b)
+\right)^+
+\right) \text{ if }  z=0.
+\end{cases}
+\end{align}
+%By summing the discounted old consumption in (\ref{nbco}) to the adult consumption in (\ref{nbca}), it is shown that individuals are indifferent regarding the decision on voluntary savings:   
+Since the alternative investment is no longer available when she reaches middle age, the best gross return she can get on both her mandatory retirement savings and her voluntary savings is $\beta^{-1}$. Given her risk-neutrality and her discount factor, she is actually indifferent regarding her voluntary savings, as shown by adding the discounted consumption in (\ref{eq:nbco}) to the consumption in (\ref{eq:nbca}):
+\begin{align}\label{eq:npvc}
+c_m + \beta c_o =   w_m   + (1-\eta) \beta^{-1}\tau_y w_y + (\eta \beta^{-1}\tau_y w_y + z    - R(v)b)^+. 
+\end{align}
+Furthermore, her contribution $\tau_m$ at middle age is inconsequential for her welfare. 
+
+In equilibrium, creditors have to be indifferent regarding lending to a young individual with a collateral coverage $v$ and investing in the asset that yields $\beta^{-1}$. Since $\epsilon$ is the risk of default and creditors are risk-neutral, the non-arbitrage condition is given by: 
+\begin{align}\label{eq:narby}
+\beta^{-1}  = (1-\epsilon)R(v) + \epsilon \min\left\{\beta^{-1}v, \ R(v)\right\},
+\end{align}
+Therefore, the lending rate must have a risk premium over the risk-free rate: 
+\begin{equation}\label{eq:neqRv}
+R(v) = \begin{cases}
+\left(\frac{1- \epsilon v}{1-\epsilon}\right)\beta^{-1} \text{ if } v<1, \\
+\beta^{-1} \text{ otherwise}.
+\end{cases}
+\end{equation}
+
+Let $V(w_y)$ denote the expected payoff for a young individual endowed with $w_y$ in labor earnings.  Use $NPV =\beta(1-\epsilon)\pi - F>0$ to denote the expected net present value of the alternative investment. 
+Equations (\ref{eq:nborrow}), (\ref{eq:ncoverage}), (\ref{eq:npvc}) and (\ref{eq:neqRv}) imply that, \textit{conditional on investing in the alternative asset}, her lifetime payoff  is the expected present value of her wages plus the net present value of the alternative investment:  %the alternative investment's surplus:
+%Conditional on being able to invest in the alternative asset, her lifetime payoff  is the present expected value of her wages plus the expected net return on the alternative investment:
+\begin{align}\label{eq:nVc}
+%V(w_y) =    w_y - F + \beta\left(E(w_m|w_y) +   (1-\epsilon)\pi\right)  
+%V(w_y) =    w_y  + \betaE(w_m|w_y) +   \beta(1-\epsilon)\pi - F
+V(w_y) =    w_y  + \beta E(w_m|w_y) +   NPV  
+\end{align}
+Nonetheless, it is assumed that $x$ is not observable, so creditors cannot force any borrower to actually invest in the alternative asset. This creates a moral hazard problem since the borrower can consume $b$ in her youth and face a penalty limited to $\eta \tau_y w_y$. Therefore, creditors will only lend to individuals who satisfy the following incentive-compatibility constraint:
+\begin{align}\label{eq:nicc}
+V(w_y) \geq    w_y  + \beta E(w_m|w_y) +   b -  \eta \tau_y w_y  
+\end{align}
+%The more individuals have to borrow, the higher the moral hazard. 
+Equation (\ref{eq:nicc}) implies that lending will be no higher than $NPV + \eta\tau_y w_y$. In other words, investing in the alternative asset requires a downpayment equal to $F - NPV - \eta\tau_y w_y$. However, disposable income for young individuals is only $(1-\tau_y)w_y$. Therefore, no individual with earnings below a certain threshold will be able to borrow enough to invest in the alternative asset. This threshold is given by:
+\begin{align}\label{eq:nthreshold}
+%    \underline{w_y} = \frac{2F - \beta(1-\epsilon)\pi}{1-(1 - \eta)\tau_y}
+    \underline{w_y} = \frac{F  - NPV}{1-(1 - \eta)\tau_y} 
+\end{align}
+
+If $F>NPV$ and the support of $G$ includes 0, the equilibrium is inneficient.
+
+What is an equilibrium? $z$ Include definition
+
+Since $NPV>0$, aggregate welfare is decreasing in the fraction of young individuals not able to get enough credit:
+\begin{align}
+%\int V(w_y) dG(w_y) = E(w_y)  + \beta E(w_m )  +  \left(1-G\left(\underline{w}_y\right)\right)\left(\beta(1-\epsilon)\pi - F\right)    
+\int V(w_y) G(dw_y) = E(w_y)  + \beta E(w_m )  +  \left(1-G\left(\underline{w}_y\right)\right)NPV
+\end{align}
+
+\begin{prp}
+Aggregate welfare is decreasing in $(1-\eta)\tau_y$.
+\end{prp}
+%Notice how the threshold $\underline{w_y}$ is increasing in $(1 - \eta)\tau_y$, which corresponds to the fraction of mandatory contributions that can not serve as collateral. 
+Notice how any increase in the defined contribution $\tau_y$ works: On one hand, it decreases disposable income, forcing young individuals to demand more borrowing. On the other, a fraction $\eta$ of $\tau_y$ can be pledged as collateral, decreasing the downpayment. Hence the only policy parameter relevant for welfare is the fraction of mandatory contributions $(1 - \eta)\tau_y$ that cannot serve as collateral. If $\eta=1$ and all retirement savings can serve as collateral, then all mandatory contributions are irrelevant. Nonetheless, as long as $\eta<1$, an increase in the mandatory contribution $\tau_y$ tightens credit, limits investment and decreases welfare. This welfare-detrimental effect is increasing in the share $(1-\eta)$ of mandatory savings not allowed to serve as collateral.
+
+\section{Unconditional basic savings}\label{sec:ubs}
+The model implies a novel way in which mandatory contributions can actually \textit{increase} efficiency. Equation (\ref{eq:nthreshold}) shows that, as long as $F-NPV$ is positive, there can be realizations for $w_y$ such that it is not possible to invest in the alternative asset. People with low enough wages would like to borrow beyond what creditors are willing to lend them, even if there are no mandatory contributions or if all contributions can serve as collateral. In order to correct this inefficiency, consider an \textit{unconditional basic savings} system where: %transfers are made in such a way that 
+1) the mandatory savings accounts of all young individuals have a minimum balance  $F-NPV$, no matter the individual contribution; and 2) this balance can be pledged as collateral. Under this system, all individuals will have enough collateral coverage to invest in the alternative asset, achieving the first-best in terms of efficiency. %\footnote{As shown by \cite{Galor1993} and \cite{Banerjee1993}, the distribution of wealth defines the proportion of credit-constrained individuals, implying that redistribution can increase efficiency. See also \cite{Ghatak2002} for a simple model.} %Notice that, for the case where $\phi=0$, the balance in the retirement account no longer depends on earnings, resembling a basic income. 
+%\end{comment}
+%Naturally, such a system requires of transfers across individuals in order to fund the unconditional basic savings.\footnote{The insight regarding the effect of wealth distribution on the proportion of credit-constrained individuals is due to  \cite{Galor1993} and \cite{Banerjee1993}. See also \cite{Ghatak2002} for a simple model.} 
+
+%\begin{comment}
+Naturally, such a system requires transfers across individuals in order to fund the unconditional basic savings. %The following is an example of such a transfer scheme: 
+For example, a tax rate $\phi$ on labor earnings above $F-NPV$ may fund an unconditional basic saving of $F-NPV$ for young individuals:
+    \begin{equation}\label{eq:tax}
+        %\phi \left(\int_{F-NPV}^\infty w_ydG(w_y) + \int_{0}^\infty\int_{F-NPV}^\infty w_adH(w_a|w_y)dG(w_y)\right)=\int_0^\infty\left(F-NPV\right)dG(w_y)
+        %\phi = \frac{\int_0^\infty\left(F-NPV\right)dG(w_y)}{\int_{F-NPV}^\infty w_ydG(w_y) + \int_{0}^\infty\int_{F-NPV}^\infty w_adH(w_a|w_y)dG(w_y)}
+        \phi = \frac{F-NPV}{\int_{F-NPV}^\infty w_yG(dw_y) + \int_{0}^\infty\int_{F-NPV}^\infty w_aH(dw_a|w_y)G(dw_y)}        
+    \end{equation}
+Meanwhile, young individuals only contribute over labor earnings above  $F-NPV$, meaning that their retirement balance is $F-NPV  + \tau_y\left(w_y - \left( F-NPV\right)\right)^+$.    
+%\begin{comment}
+%In order to correct this inefficiency,  consider %the following alternative regime, which I will %call the \textit{unconditional basic savings} %system:
+%\end{comment}
+%\begin{comment}
+\begin{enumerate}
+    \item There is a tax rate $\phi$ on labor earnings above $F-NPV$ such that the tax revenue is enough to fund an unconditional basic saving of $F-NPV$ for young individuals:
+    \begin{equation}\label{eq:tax}
+        %\phi \left(\int_{F-NPV}^\infty w_ydG(w_y) + \int_{0}^\infty\int_{F-NPV}^\infty w_adH(w_a|w_y)dG(w_y)\right)=\int_0^\infty\left(F-NPV\right)dG(w_y)
+        \phi = \frac{\int_0^\infty\left(F-NPV\right)dG(w_y)}{\int_{F-NPV}^\infty w_ydG(w_y) + \int_{0}^\infty\int_{F-NPV}^\infty w_adH(w_a|w_y)dG(w_y)}
+    \end{equation}
+    \item The young mandatory contributions are given by: 
+%    $$T(w_y) = \tau_y\left(w_y - \left( 2F-\beta(1-\epsilon)\pi\right)\right)^+.$$
+    \begin{equation}\label{eq:T}
+        T(w_y) = \tau_y\left(w_y - \left( F-NPV\right)\right)^+.
+    \end{equation} 
+%    This means that, for earnings below $F-NPV$, the marginal contribution is zero. Meanwhile, for earnings above $F-NPV$, the marginal contribution is $\tau_y>0$. 
+    \item The young retirement balance is given by:
+%    $$B(w_y) =  \left(F-NPV -w_y\right)^+ + (\tau_y-\phi)\left(w_y - \left( F-NPV\right)\right)^+$$
+    \begin{equation}\label{eq:B}
+    B(w_y) =  F-NPV  + \tau_y\left(w_y - \left( F-NPV\right)\right)^+
+    \end{equation}
+    %This means that the balance in the individual retirement account is never below $F-NPV$, even if the individual makes no contribution. To compensate for this deficit, a fraction $\phi \in (0,\tau_y)$ of the earnings above $F-NPV$ are pooled in order to be transferred to the retirement accounts of individuals who do not pay any contribution.
+    %\item The policy parameters $\phi_y$ and $\tau_y$ are calibrated in such a way that the net transfer across individual retirement accounts is zero:
+    %$$ \phi = \frac{ \int_0^{F-NPV}\left(F-NPV -w_y\right)dG(w_y)}{\int_{F-NPV}^\infty\left(w_y - \left(F-NPV\right)\right)dG(w_y)}\leq \tau_y$$
+    %$$ \phi = \frac{ \left(F-NPV \right)G\left(F-NPV\right)}{\int_{F-NPV}^\infty w_y dG(w_y) - \left(F-NPV\right)\left(1-G\left(F-NPV\right)\right)}\leq \tau_y$$    
+    %\begin{equation}\label{eq:phi}
+        %\phi = \frac{ \int_0^{F-NPV}\left(F-NPV \right)dG(w_y)}{\int_{F-NPV}^\infty\left(w_y - \left(F-NPV\right)\right)dG(w_y)}\leq \tau_y
+        %\int \left(B(w_y)-T(w_y)\right)dG(w_y) = 0
+    %\end{equation}
+    %\item All the savings in the individual retirement accounts can serve as collateral.
+\end{enumerate}
+%\end{comment}
+Under the assumption that at least an amount $F - NPV$ of the retirement savings can be pledged as collateral, these transfers will lead to no credit-constrained individuals%, implying full investment in the alternative asset and an efficient allocation of resources
+.\footnote{The insight regarding the effect of wealth distribution on the proportion of credit-constrained individuals is due to  \cite{Galor1993} and \cite{Banerjee1993}. See also \cite{Ghatak2002} for a simple model.} 
+ 
+
+%\footnote{Such a link between wealth distribution and efficiency has been previously pointed out by \cite{Galor1993} and \cite{Banerjee1993}. See also \cite{Ghatak2002} for a simple model.} 
+
+%As shown by \cite{Galor1993} and \cite{Banerjee1993}, the distribution of wealth defines the proportion of credit-constrained individuals, implying that redistribution can increase efficiency. This model calls for such a type of redistribution. See also \cite{Ghatak2002} for a simple model.
+
+\section{Final remarks}
+
+A natural concern regarding the unconditional basic savings system is whether there are enough resources to fund such a system. For example, Equation (\ref{eq:tax}) implies that, for $\phi$ to be less than one, the mass of earnings above $F-NPV$ has to be sufficiently high. Given the constraints on obtaining funds from labor income, a contribution from capital income should not be ruled out. Especially in the context of increased automatization, the funding of unconditional basic savings through taxes on capital earnings may dampen the increasing wealth inequality, although the overall effect of such a funding scheme on savings and investment might be ambiguous.  % This implies that part of the additional contributions are paid by themselves.\footnote{Such an intergenerational transfer is reminiscent of the education-funding scheme suggested by \cite{Boldrin2005}, although their transfer is used to fund public education rather than to serve as collateral to borrow to invest in human capital.} 
+%A related issue is the avoidance of mandatory contributions. For example, since $\phi$ is in fact a marginal tax on labor earnings, 
+%Additional inefficiencies may arise if taxes and contributions can be avoided by moving to the informal sector. Still, compared to the system where contributions as a share of labor earnings are constant, the incentives for avoidance in the transfer scheme suggested in Section \ref{sec:ubs} increase for high-earners but decrease for low-earners.\footnote{In the context of emerging economies, labor informality is a crucial hindrance for the funding of pension systems. In Colombia for example, almost half the labor force works in the informal sector, but this share skyrockets for workers at the bottom of the distribution of labor earnings. This is due to a legal minimum wage too close to the medium wage and a combination of payroll taxes, severance payments and social security contributions that inflates labor costs by more than 40\%. Properly calibrated, the transfer scheme described in Section \ref{sec:ubs} would decrease the cost of hiring low-productivity workers in the formal economy without decreasing the accumulation of savings in their retirement accounts.}
+%\end{comment}
+
+%Nonetheless, when $\eta=1$ and so the savings in the retirement accounts can be pledged as collateral, the defined contributions are inconsequential for the access to credit. As contributions increase, collateral increases as well. As a consequence, lenders are willing to meet the higher need of borrowing since the lending risk becomes smaller.
+
+Discussion about borrowing for consumption
+
+\bibliography{biblio}
+%\bibliographystyle{gammacago}
+\bibliographystyle{chicago}
+\end{document}

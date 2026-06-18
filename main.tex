@@ -151,10 +151,6 @@ R_f \text{ otherwise}.
 \end{cases}
 \end{equation}
 
-\begin{dfn}
-Given policy parameters $(\tau_y,\tau_m,\eta)$, an equilibrium consists of borrowing, investment, consumption, and saving choices for individuals and a lending rate schedule $R(v)$ such that: individuals maximize expected lifetime payoff subject to their budget constraints and limited liability; borrowers repay when $z=\pi$ and default when $z=0$; lenders break even against the safe asset for every collateral coverage ratio $v$ at which they lend; and young individuals invest in the alternative asset whenever they can finance the required amount $F$ while satisfying the incentive-compatibility constraint below.
-\end{dfn}
-
 Let $V(w_y)$ denote the expected payoff for a young individual endowed with $w_y$ in labor earnings.  Use $\mathcal{N}:=\beta(1-\epsilon)\pi - F>0$ to denote the expected net present value of the alternative investment. 
 Equations (\ref{eq:nborrow}), (\ref{eq:ncoverage}), (\ref{eq:npvc}) and (\ref{eq:neqRv}) imply that, \textit{conditional on investing in the alternative asset}, her lifetime payoff  is the expected present value of her wages plus the net present value of the alternative investment. The zero-profit condition for lenders implies that the present value of expected repayments equals the amount borrowed, so the borrower captures the project's net present value:
 \begin{align}\label{eq:nVc}
@@ -168,6 +164,11 @@ Substituting (\ref{eq:nVc}) into (\ref{eq:nicc}) implies:
 \begin{align*}
 b(w_y) \leq \mathcal{N} + \eta B(w_y).
 \end{align*}
+
+\begin{dfn}
+Given policy parameters $(\tau_y,\tau_m,\eta)$, an equilibrium consists of borrowing, investment, consumption, and saving choices for individuals and a lending rate schedule $R(v)$ such that: individuals maximize expected lifetime payoff subject to the budget constraints (\ref{eq:nbca})--(\ref{eq:nbco}) and limited liability; borrowers repay when $z=\pi$ and default when $z=0$; lenders break even against the safe asset for every collateral coverage ratio $v$ at which they lend, so that (\ref{eq:narby}) holds; and young individuals invest in the alternative asset whenever they can finance $F$ and satisfy the incentive-compatibility constraint (\ref{eq:nicc}), equivalently $b(w_y)\leq \mathcal{N}+\eta B(w_y)$.
+\end{dfn}
+
 In other words, investing in the alternative asset requires a downpayment equal to $F - \mathcal{N} - \eta B(w_y)$. However, disposable income for young individuals is only $(1-\tau_y)w_y$. Using $B(w_y)=\tau_y w_y$, no individual with earnings below a certain threshold will be able to borrow enough to invest in the alternative asset. This threshold is given by:
 \begin{align}\label{eq:nthreshold}
     \underline w_y = \frac{F  - \mathcal{N}}{1-(1 - \eta)\tau_y} 

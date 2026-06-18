@@ -197,12 +197,13 @@ The model also suggests a way in which mandatory retirement savings can \textit{
 
 The source of the inefficiency is not mandatory saving per se, but the lack of pledgeable resources among low-wage young individuals. Equation (\ref{eq:down}) shows that the minimum collateral balance needed to remove this constraint for every young individual is $F-\mathcal{N}$. A natural response is therefore to guarantee a minimum retirement balance of exactly this amount that can be used as collateral.
 
-The tax is used only to finance the universal component of retirement balances; it is not credited to the taxpayer's individual account. The denominator in (\ref{eq:tax}) is the corresponding tax base, including young earnings above $F-\mathcal{N}$ and middle-age earnings above $F-\mathcal{N}$. Consider an \textit{unconditional basic savings} system with the following features:
+Consider an \textit{unconditional basic savings} system with the following features:
 \begin{enumerate}
     \item A tax rate $\phi$ is levied on young and middle-age labor earnings above $F-\mathcal{N}$. The tax rate is set so that tax revenue funds an unconditional retirement saving of $F-\mathcal{N}$ for each young individual:
     \begin{equation}\label{eq:tax}
         \phi = \frac{\int_0^\infty\left(F-\mathcal{N}\right)dG(w_y)}{\int_{F-\mathcal{N}}^\infty w_ydG(w_y) + \int_{0}^\infty\int_{F-\mathcal{N}}^\infty w_mdH(w_m|w_y)dG(w_y)}
     \end{equation}
+    The denominator in (\ref{eq:tax}) is the corresponding tax base, including young earnings above $F-\mathcal{N}$ and middle-age earnings above $F-\mathcal{N}$.
     \item Young individuals make additional mandatory contributions only on earnings above $F-\mathcal{N}$:
     \begin{equation}\label{eq:T}
         T(w_y) = \tau_y\left(w_y - \left( F-\mathcal{N}\right)\right)^+.

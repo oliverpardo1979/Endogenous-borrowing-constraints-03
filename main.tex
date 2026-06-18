@@ -182,22 +182,22 @@ Since $\mathcal{N}>0$, aggregate welfare is decreasing in the fraction of young 
 \end{align}
 
 \begin{prp}
-Suppose Assumption \ref{Assump1} holds and let $\omega=(1-\eta)\tau_y$. Aggregate welfare is weakly decreasing in $\omega$. If $G$ is differentiable with strictly positive density on the relevant range of $\underline w_y(\omega)$, then aggregate welfare is strictly decreasing in $\omega$ on that range.
+Suppose Assumption \ref{Assump1} holds. Aggregate welfare is weakly decreasing in $(1-\eta)\tau_y$. If $G$ is differentiable with strictly positive density on the relevant range of $\underline w_y$, then aggregate welfare is strictly decreasing in $(1-\eta)\tau_y$ on that range.
 \end{prp}
 \begin{proof}
 From (\ref{eq:nthreshold}),
 \[
-\underline w_y(\omega)=\frac{F-\mathcal{N}}{1-\omega}.
+\underline w_y=\frac{F-\mathcal{N}}{1-(1-\eta)\tau_y}.
 \]
 Assumption \ref{Assump1} implies $F>\mathcal{N}$, so
 \[
-\frac{\partial \underline w_y(\omega)}{\partial \omega}
-=\frac{F-\mathcal{N}}{(1-\omega)^2}>0.
+\frac{\partial \underline w_y}{\partial ((1-\eta)\tau_y)}
+=\frac{F-\mathcal{N}}{[1-(1-\eta)\tau_y]^2}>0.
 \]
-Aggregate welfare is given by Equation (\ref{eq:aggW}). Since $G$ is weakly increasing and $\mathcal{N}>0$, an increase in $\omega$ weakly decreases $W$ by increasing the measure of young individuals who cannot finance the alternative investment. If $G$ is differentiable with density $g(\underline w_y(\omega))>0$, then
+Aggregate welfare is given by Equation (\ref{eq:aggW}). Since $G$ is weakly increasing and $\mathcal{N}>0$, an increase in $(1-\eta)\tau_y$ weakly decreases $W$ by increasing the measure of young individuals who cannot finance the alternative investment. If $G$ is differentiable with density $g(\underline w_y)>0$, then
 \[
-\frac{\partial W}{\partial \omega}
-=-\mathcal{N}g(\underline w_y(\omega))\frac{F-\mathcal{N}}{(1-\omega)^2}<0,
+\frac{\partial W}{\partial ((1-\eta)\tau_y)}
+=-\mathcal{N}g(\underline w_y)\frac{F-\mathcal{N}}{[1-(1-\eta)\tau_y]^2}<0,
 \]
 which gives strict monotonicity on that range.
 \end{proof}

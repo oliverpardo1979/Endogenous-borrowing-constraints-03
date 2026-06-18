@@ -182,11 +182,24 @@ Since $\mathcal{N}>0$, aggregate welfare is decreasing in the fraction of young 
 \end{align}
 
 \begin{prp}
-Aggregate welfare is weakly decreasing in $(1-\eta)\tau_y$.
+Suppose Assumption \ref{Assump1} holds and let $\omega=(1-\eta)\tau_y$. Aggregate welfare is weakly decreasing in $\omega$. If $G$ is differentiable with strictly positive density on the relevant range of $\underline w_y(\omega)$, then aggregate welfare is strictly decreasing in $\omega$ on that range.
 \end{prp}
 \begin{proof}
-If $F>\mathcal{N}$, then $\underline w_y$ is increasing in $(1 - \eta)\tau_y$. Aggregate welfare is given by Eqaution (\ref{eq:aggW}).
-Since $G$ is weakly increasing and $\mathcal{N}>0$, an increase in $(1-\eta)\tau_y$ weakly decreases $W$ by increasing the measure of young individuals who cannot finance the alternative investment. The decrease is strict whenever $G$ has positive mass around the threshold.
+From (\ref{eq:nthreshold}),
+\[
+\underline w_y(\omega)=\frac{F-\mathcal{N}}{1-\omega}.
+\]
+Assumption \ref{Assump1} implies $F>\mathcal{N}$, so
+\[
+\frac{\partial \underline w_y(\omega)}{\partial \omega}
+=\frac{F-\mathcal{N}}{(1-\omega)^2}>0.
+\]
+Aggregate welfare is given by Equation (\ref{eq:aggW}). Since $G$ is weakly increasing and $\mathcal{N}>0$, an increase in $\omega$ weakly decreases $W$ by increasing the measure of young individuals who cannot finance the alternative investment. If $G$ is differentiable with density $g(\underline w_y(\omega))>0$, then
+\[
+\frac{\partial W}{\partial \omega}
+=-\mathcal{N}g(\underline w_y(\omega))\frac{F-\mathcal{N}}{(1-\omega)^2}<0,
+\]
+which gives strict monotonicity on that range.
 \end{proof}
 
 Notice how any increase in the defined contribution $\tau_y$ works: On one hand, it decreases disposable income, forcing young individuals to demand more borrowing. On the other, a fraction $\eta$ of $\tau_y$ can be pledged as collateral, decreasing the downpayment. Hence the only policy parameter relevant for welfare is the fraction of mandatory contributions $(1 - \eta)\tau_y$ that cannot serve as collateral. If $\eta=1$ and all retirement savings can serve as collateral, then all mandatory contributions are irrelevant. Nonetheless, as long as $\eta<1$, an increase in the mandatory contribution $\tau_y$ tightens credit, limits investment and decreases welfare. This welfare-detrimental effect is increasing in the share $(1-\eta)$ of mandatory savings not allowed to serve as collateral.
